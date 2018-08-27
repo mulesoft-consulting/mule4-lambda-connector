@@ -4,11 +4,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>fa979c21-80ff-4a20-8d27-53fc149ab964</groupId>
-    <artifactId>lambda-connector</artifactId>
-    <version>0.1.1</version>
+    <groupId>com.mulesoft.services.lambda</groupId>
+    <artifactId>mule4-lambda-connector</artifactId>
+    <version>0.9.0</version>
     <packaging>mule-extension</packaging>
     <name>Lambda Extension</name>
+
+    <properties>
+        <anypointOrgId>replaceme</anypointOrgId>
+    </properties>
 
     <parent>
         <groupId>org.mule.extensions</groupId>
@@ -33,7 +37,7 @@
     <distributionManagement>
         <repository>
             <id>anypoint-pl</id>
-            <url>https://maven.anypoint.mulesoft.com/api/v1/organizations/fa979c21-80ff-4a20-8d27-53fc149ab964/maven</url>
+            <url>https://maven.anypoint.mulesoft.com/api/v1/organizations/${anypointOrgId}/maven</url>
         </repository>
     </distributionManagement>
 </project>
