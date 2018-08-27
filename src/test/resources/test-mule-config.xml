@@ -1,0 +1,13 @@
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:lambda="http://www.mulesoft.org/schema/mule/lambda"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+          http://www.mulesoft.org/schema/mule/lambda http://www.mulesoft.org/schema/mule/lambda/current/mule-lambda.xsd">
+
+    <lambda:config name="config" accessKey="myAccessKey" secretKey="mySecretKey">
+    </lambda:config>
+
+    <flow name="invokeFlow">
+        <lambda:invoke config-ref="config" functionName="test" content="#[payload]"/>
+    </flow>
+</mule>
